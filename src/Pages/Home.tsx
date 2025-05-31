@@ -1,31 +1,28 @@
 import React, { useState } from "react";
 import profileImg from "../Images/AjayAucharPhoto.jpg";
 import Button from "../ReusableComponents/Button";
-import { useNavigate } from "react-router-dom";
 import About from "./About";
 import Skills from "./Skills";
 import Projects from "./Projects";
 import Contact from "./Contact";
 
 const Home = () => {
-  const navigate = useNavigate();
-
   const buttonData = [
     {
       name: "View My Work",
-      route: "/projects",
       style: ["border-red-900", "bg-red-800"],
+      routeId: "#projects",
     },
     {
       name: "Contact Me",
-      route: "/contact",
       style: ["border-black", "bg-black"],
+      routeId: "#contact",
     },
   ];
 
   return (
     <>
-      <div className="flex justify-center items-center w-screen py-18">
+      <div id="home" className="flex justify-center items-center py-18">
         <div className="flex flex-col justify-center items-center w-1/2">
           <img
             src={profileImg}
@@ -36,26 +33,25 @@ const Home = () => {
             Frontend Developer
           </h4>
           <p className="text-md mt-3 text-black">
-            I'm Ajay Auchar, a Frontend Developer with 3+ years of experience
-            building responsive, accessible web applications using React.js,
-            MUI, and modern UI technologies.
+            I am Ajay Auchar, a dedicated Frontend Developer with over 3+ years
+            of professional experience in designing and developing
+            high-performance, scalable, and responsive web applications. I
+            specialize in leveraging modern technologies such as React.js,
+            JavaScript (ES6+), Redux, TypeScript, Tailwind CSS, and Material UI
+            to build intuitive and dynamic user interfaces.
           </p>
-          <div className="flex gap-6 mt-8">
+          <div className="flex gap-6 mt-10">
             {buttonData.map((elem, ind) => (
               <Button
                 key={ind}
                 name={elem.name}
-                onClick={() => navigate(elem.route)}
+                routeId={elem.routeId}
                 className={`${[...elem.style]}`}
               />
             ))}
           </div>
         </div>
       </div>
-      <About />
-      <Skills />
-      <Projects />
-      <Contact />
     </>
   );
 };

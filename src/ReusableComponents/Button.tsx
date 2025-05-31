@@ -2,20 +2,19 @@ import React from "react";
 
 type ButtonType = {
   name: string;
-  onClick: () => void;
+  routeId: string;
   className?: string;
 };
 
-const Button = ({ name, onClick, className }: ButtonType) => {
+const Button = ({ name, routeId, className }: ButtonType) => {
   return (
     <button
-      onClick={onClick}
       className={`py-2 w-40 border-3 rounded-lg cursor-pointer text-white font-medium ${className?.replace(
         /,/g,
         " "
       )}`}
     >
-      {name}
+      <a href={routeId}> {name} </a>
     </button>
   );
 };

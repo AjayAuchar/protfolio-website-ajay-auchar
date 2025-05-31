@@ -1,46 +1,40 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
-  const navigate = useNavigate();
   const navData = [
     {
       name: "Home",
-      route: "/",
+      id: "#home",
     },
     {
       name: "About",
-      route: "/about",
+      id: "#about",
     },
     {
       name: "Skills",
-      route: "/skills",
+      id: "#skills",
     },
     {
       name: "Projects",
-      route: "/projects",
+      id: "#projects",
     },
     {
       name: "Contact",
-      route: "/contact",
+      id: "#contact",
     },
   ];
-
-  const handleRoute = (route: string) => {
-    navigate(route);
-  };
 
   return (
     <div className="flex gap-12 cursor-pointer">
       {navData?.map((navItem, ind) => {
         return (
-          <span
+          <a
             key={ind}
+            href={navItem.id}
             className="text-base font-medium text-red-800"
-            onClick={() => handleRoute(navItem.route)}
           >
             {navItem.name}
-          </span>
+          </a>
         );
       })}
     </div>

@@ -63,7 +63,7 @@ const skillData = [
 
 const Skills = () => {
   return (
-    <div className="w-screen mb-18">
+    <div id="skills" className="mb-18">
       <div className="flex items-center justify-center">
         <span className="text-xl font-medium text-black font-extrabold my-8">
           MY SKILLS

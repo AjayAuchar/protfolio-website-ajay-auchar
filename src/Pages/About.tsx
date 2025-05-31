@@ -2,11 +2,8 @@ import React from "react";
 import profileImg from "../Images/AjayAucharPhoto.jpg";
 import InfoCard from "../ReusableComponents/InfoCard";
 import Button from "../ReusableComponents/Button";
-import { useNavigate } from "react-router-dom";
 
 const About = () => {
-  const navigate = useNavigate();
-
   const InfoDetail = [
     { title: "Name", detail: "Ajay Auchar" },
     { title: "Email", detail: "ajayauchar02@gmail.com" },
@@ -18,7 +15,7 @@ const About = () => {
   ];
 
   return (
-    <div className="w-screen">
+    <div id="about">
       <div className="flex items-center justify-center">
         <span className="text-xl font-medium text-black font-extrabold my-8">
           ABOUT ME
@@ -37,15 +34,25 @@ const About = () => {
               Frontend Developer{" "}
             </h4>
             <p className="text-md">
-              I'm a passionate web developer with 5 years of experience creating
-              beautiful, functional, and user-centered digital experiences. I am
-              always looking to learn new technologies and improve my skills.
+              I’m Ajay Auchar, a results-oriented Frontend Developer with over 3
+              years of experience in designing and building responsive,
+              high-performance web applications. I specialize in developing
+              modern, interactive user interfaces using technologies such as
+              React.js, JavaScript (ES6+), TypeScript, Redux Toolkit, and
+              popular UI libraries like Material UI and Tailwind CSS.
             </p>
-            <p className="mt-2 text-md">
-              With a strong foundation in front-end development and a keen eye
-              for design, I create websites that not only look great but also
-              provide exceptional user experiences. I'm dedicated to writing
-              clean, optimized code and using modern development practices.
+            <p className="mt-4 text-md">
+              My work focuses on delivering clean, scalable, and maintainable
+              code that enhances both user experience and system performance. I
+              have hands-on experience with real-time data communication using
+              WebSockets, efficient REST API integration, and managing complex
+              application states for robust front-end behavior.
+            </p>
+            <p className="mt-4 text-md">
+              Currently based in Navi Mumbai, India, I am actively exploring new
+              opportunities that allow me to contribute to innovative teams,
+              solve real-world problems through technology, and advance my
+              expertise in modern frontend development.
             </p>
           </>
           <div className="flex gap-10 flex-wrap mt-8">
@@ -56,9 +63,7 @@ const About = () => {
           <Button
             name="Let's Connect"
             className={`${["border-red-900", "bg-red-800", "mt-12"]}`}
-            onClick={() => {
-              navigate("/contact");
-            }}
+            routeId="#contact"
           />
         </div>
       </div>

@@ -30,31 +30,35 @@ const Contact = () => {
     },
   ];
   return (
-    <div className="mb-24">
+    <div id="contact" className="mb-24">
       <div className="flex items-center justify-center">
         <span className="text-xl font-medium text-black font-extrabold my-8">
           CONTACT US
         </span>
       </div>
-      <div className="flex gap-10 px-14 mt-4">
+      <div className="flex gap-25 px-16 mt-4">
         <div className="flex-1 p-4">
-          <h4 className="pb-3 text-lg font-medium"> CONTACT INFORMATION </h4>
-          <p className="text-md my-4 text-black font-medium">
+          <h4 className="pb-3 text-lg font-medium text-red-800">
             {" "}
-            I'm open for new opportunities and collaborations. If you have a
-            project that needs my help, please get in touch{" "}
+            CONTACT INFORMATION{" "}
+          </h4>
+          <p className="text-md my-5 text-black">
+            I am currently open to new opportunities and collaborative projects
+            where I can contribute my skills and experience in frontend
+            development. Let’s connect and build something great together.
           </p>
           {contactInfo?.map((elem) => (
             <div>
-              <h6 className="text-lg font-medium">{elem.title} : </h6>{" "}
-              <p className="mb-4"> {elem.detail}</p>
+              <h6 className="text-md font-medium text-red-800">
+                {elem.title} :
+              </h6>
+              <p className="mb-5 font-medium"> {elem.detail}</p>
             </div>
           ))}
         </div>
-        <div className="flex-1 border-2 rounded-lg p-6 border-3 border-black-700">
-          <h4 className="text-lg font-medium text-black font-bold">
-            {" "}
-            GET IN TOUCH{" "}
+        <div className="flex-1 border-2 rounded-lg py-8 px-6 border-3 border-black-700">
+          <h4 className="text-lg font-medium text-black font-bold text-red-800">
+            GET IN TOUCH
           </h4>
           <div className="mt-6">
             {contactForm?.map((item) => (
@@ -70,7 +74,7 @@ const Contact = () => {
 
             <Button
               name="Submit"
-              onClick={() => {}}
+              routeId="contact"
               className={`${["border-red-900", "bg-red-800", "mt-12"]}`}
             />
           </div>

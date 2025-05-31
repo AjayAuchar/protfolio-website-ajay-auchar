@@ -25,7 +25,7 @@ const Projects = () => {
   ];
 
   return (
-    <div className="w-screen mb-18">
+    <div id="projects" className="mb-18">
       <div className="flex items-center justify-center">
         <span className="text-xl font-medium text-black font-extrabold my-8">
           MY PROJECTS
