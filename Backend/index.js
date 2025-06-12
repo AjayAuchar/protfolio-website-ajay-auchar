@@ -23,6 +23,11 @@ app.use("/users", user_router);
 // connection to MongoDB
 require("./MongoDB/connection");
 
+app.use(express.static(path.join(__dirname, "../Frontend/dist")));
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../Frontend/dist/index.html"));
+});
+
 app.listen(PORT, () => {
   console.log(`server is connected`);
 });

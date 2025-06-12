@@ -1,8 +1,6 @@
 import React from "react";
 
 const ToastMess = ({ message }) => {
-  console.log(message, "message");
-
   return (
     <div
       className={`py-1.5 pl-6 mt-2 border-3 rounded-md font-medium text-white w-lg capitalize

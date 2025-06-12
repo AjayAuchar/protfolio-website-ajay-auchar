@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "build",
-    "start": "node Backend/index.js"
+    "start": "node Backend/index.js",
+     "postinstall": "cd ../Frontend && npm install && npm run build"
   },
   "author": "",
   "license": "ISC",
