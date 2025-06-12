@@ -1,19 +1,14 @@
+require("dotenv").config(); // Load env variables
 const express = require("express");
 const app = express();
 const PORT = process.env.PORT || 4000;
-require("dotenv").config(); // Load env variables
 const path = require("path");
 
 // requiring cors
 const cors = require("cors");
 
-app.use(
-  cors({ origin: "https://protfolio-website-ajay-auchar.onrender.com/" })
-);
-app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "*");
-  next();
-});
+app.use(cors());
+
 console.log(process.env.MONGO_URI, "MONGO_URI");
 
 app.use(express.json());
