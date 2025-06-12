@@ -7,15 +7,16 @@ const path = require("path");
 // requiring cors
 const cors = require("cors");
 
-app.use(cors({ origin: "http://localhost:5173" }));
+app.use(
+  cors({ origin: "https://protfolio-website-ajay-auchar.onrender.com/" })
+);
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
   next();
 });
 console.log(process.env.MONGO_URI, "MONGO_URI");
 
-const body_parser = require("body-parser");
-app.use(body_parser.json());
+app.use(express.json());
 
 // requiring router
 const user_router = require("./Routes/users");

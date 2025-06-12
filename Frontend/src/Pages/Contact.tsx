@@ -60,18 +60,21 @@ const Contact = () => {
       contactForm.message
     ) {
       try {
-        const res = await fetch("http://localhost:4000/users", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            fullname: contactForm.fullname,
-            email: contactForm.email,
-            address: contactForm.address,
-            message: contactForm.message,
-          }),
-        });
+        const res = await fetch(
+          "https://protfolio-website-ajay-auchar.onrender.com/users",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              fullname: contactForm.fullname,
+              email: contactForm.email,
+              address: contactForm.address,
+              message: contactForm.message,
+            }),
+          }
+        );
 
         const data = await res.json();
         setMessage({ type: res.ok ? "success" : "error", mess: data._message });
