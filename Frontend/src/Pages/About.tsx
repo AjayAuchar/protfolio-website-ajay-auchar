@@ -2,15 +2,20 @@ import React from "react";
 import profileImg from "../Images/AjayAucharPhoto.jpg";
 import InfoCard from "../ReusableComponents/InfoCard";
 import Button from "../ReusableComponents/Button";
+import EmailIcon from "@mui/icons-material/Email";
+import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import PersonIcon from "@mui/icons-material/Person";
 
 const About = () => {
   const InfoDetail = [
-    { title: "Name", detail: "Ajay Auchar" },
-    { title: "Email", detail: "ajayauchar02@gmail.com" },
-    { title: "Number", detail: "+91 8291626294" },
+    { title: "Name", detail: "Ajay Auchar", icon: <PersonIcon /> },
+    { title: "Email", detail: "ajayauchar02@gmail.com", icon: <EmailIcon /> },
+    { title: "Number", detail: "+91 8291626294", icon: <LocalPhoneIcon /> },
     {
       title: "Linked Profile",
       detail: "https://www.linkedin.com/in/ajay-auchar-6ab080223/",
+      icon: <LinkedInIcon />,
     },
   ];
 
