@@ -19,23 +19,32 @@ const Projects = () => {
       detail:
         " A full-featured dashboard for e-commerce stores with analytics, product management, and order processing",
       img: ticTacToeGameImg,
-      link: "https://gitlab.com/my-websites4815020/tic-tac-toe-game",
+      gitUrl: "https://gitlab.com/my-websites4815020/tic-tac-toe-game",
+      url: "",
     },
     {
       name: "Portfolio Website",
       detail:
         " A full-featured dashboard for e-commerce stores with analytics, product management, and order processing",
       img: protfolioWebsiteImg,
-      link: "https://gitlab.com/my-websites4815020/portfolio-website-ajay-auchar",
+      gitUrl: "https://github.com/AjayAuchar/protfolio-website-ajay-auchar",
+      url: "https://protfolio-website-ajay-auchar.onrender.com",
     },
     {
-      name: "Portfolio Website",
+      name: "Static Website",
       detail:
         " A full-featured dashboard for e-commerce stores with analytics, product management, and order processing",
       img: madiraWebImg,
-      link: "https://gitlab.com/my-websites4815020/portfolio-website-ajay-auchar",
+      gitUrl:
+        "https://github.com/AjayAuchar/pt-international-mandiri-expo-frontend",
+      url: "",
     },
   ];
+
+  const openInNewTab = (url) => {
+    if (!url) return alert("Invalid URL");
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
 
   return (
     <div id="projects" className="mb-18">
@@ -61,10 +70,18 @@ const Projects = () => {
               <p className="text-md mt-3 text-black">{elem.detail}</p>
             </CardContent>
             <CardActions>
-              <Button>
+              <Button
+                onClick={() => {
+                  openInNewTab(elem.url);
+                }}
+              >
                 <OpenInNewIcon className="text-red-800" />
               </Button>
-              <Button onClick={() => {}}>
+              <Button
+                onClick={() => {
+                  openInNewTab(elem.gitUrl);
+                }}
+              >
                 <GitHubIcon className="text-red-800" />
               </Button>
             </CardActions>

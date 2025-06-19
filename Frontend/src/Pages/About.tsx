@@ -26,11 +26,11 @@ const About = () => {
           ABOUT ME
         </span>
       </div>
-      <div className="flex px-10 pb-18">
+      <div className="flex px-10 pb-18 flex-wrap">
         <div className="flex-1 flex items-center justify-center">
           <img
             src={profileImg}
-            className="w-80 h-80 rounded-full object-cover border-5 border-red-700"
+            className="w-80 h-80 rounded-full object-cover border-5 border-red-700 shrink-0"
           />
         </div>
         <div className="flex-2 flex flex-col">

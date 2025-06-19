@@ -91,7 +91,7 @@ const Contact = () => {
           CONTACT US
         </span>
       </div>
-      <div className="flex gap-25 px-16 mt-4">
+      <div className="flex gap-25 px-16 mt-4 flex-wrap">
         <div className="flex-1 p-4">
           <h4 className="pb-3 text-lg font-medium text-red-800">
             {" "}
