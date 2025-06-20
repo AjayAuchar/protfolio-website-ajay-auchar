@@ -39,9 +39,9 @@ const Skills = () => {
           MY SKILLS
         </span>
       </div>
-      <div className="grid grid-cols-3 gap-6 px-14">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-14">
         {skillData?.map((elem) => (
-          <div className="border-2 rounded-md p-6 border-3 border-black-700">
+          <div className="border-2 rounded-md p-6 border-3 border-black-700 w-full">
             <h4 className="pb-3 text-lg font-medium text-red-800">
               {" "}
               {elem.title}{" "}
