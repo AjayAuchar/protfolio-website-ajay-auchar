@@ -33,7 +33,7 @@ const About = () => {
             className="w-80 h-80 rounded-full object-cover border-5 border-red-700 shrink-0"
           />
         </div>
-        <div className="flex-2 flex flex-col">
+        <div className="flex-2 flex flex-col text-center md:text-start">
           <>
             <h4 className="text-xl font-medium mt-3 text-red-800 mb-4">
               Frontend Developer{" "}
