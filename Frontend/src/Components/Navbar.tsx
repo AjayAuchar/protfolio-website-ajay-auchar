@@ -49,7 +49,7 @@ const Navbar = () => {
     <div className="flex gap-13 cursor-pointer">
       <>
         {/* Desktop nav */}
-        <div className="hidden md:flex gap-8 cursor-pointer">
+        <div className="hidden md:flex gap-10 cursor-pointer">
           {navData.map((navItem, ind) => (
             <a
               key={ind}

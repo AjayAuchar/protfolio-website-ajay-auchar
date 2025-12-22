@@ -23,14 +23,14 @@ const Contact = () => {
   ];
 
   const initialForm = {
-    fullname: "",
-    email: "",
-    address: "",
-    message: "",
+    Fullname: "",
+    Email: "",
+    Address: "",
+    Message: "",
   };
 
   const placeholders = {
-    fullName: "Enter your name",
+    Fullname: "Enter your name",
     Email: "Enter your email",
     Address: "Enter your address",
     Message: "Enter your message",
@@ -54,10 +54,10 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     if (
-      contactForm.fullname &&
-      contactForm.email &&
-      contactForm.address &&
-      contactForm.message
+      contactForm.Fullname &&
+      contactForm.Email &&
+      contactForm.Address &&
+      contactForm.Message
     ) {
       try {
         const res = await fetch(
@@ -68,10 +68,10 @@ const Contact = () => {
               "Content-Type": "application/json",
             },
             body: JSON.stringify({
-              fullname: contactForm.fullname,
-              email: contactForm.email,
-              address: contactForm.address,
-              message: contactForm.message,
+              fullname: contactForm.Fullname,
+              email: contactForm.Email,
+              address: contactForm.Address,
+              message: contactForm.Message,
             }),
           }
         );
@@ -91,7 +91,7 @@ const Contact = () => {
           CONTACT US
         </span>
       </div>
-      <div className="flex gap-25 px-16 mt-4 flex-wrap">
+      <div className="flex gap-25 px-16 pb-10 mt-4 flex-wrap">
         <div className="flex-1 p-4">
           <h4 className="pb-3 text-lg font-medium text-red-800">
             {" "}
