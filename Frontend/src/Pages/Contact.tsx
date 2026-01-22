@@ -23,14 +23,14 @@ const Contact = () => {
   ];
 
   const initialForm = {
-    fullname: "",
-    email: "",
-    address: "",
-    message: "",
+    Fullname: "",
+    Email: "",
+    Address: "",
+    Message: "",
   };
 
   const placeholders = {
-    fullName: "Enter your name",
+    Fullname: "Enter your name",
     Email: "Enter your email",
     Address: "Enter your address",
     Message: "Enter your message",
@@ -54,10 +54,10 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     if (
-      contactForm.fullname &&
-      contactForm.email &&
-      contactForm.address &&
-      contactForm.message
+      contactForm.Fullname &&
+      contactForm.Email &&
+      contactForm.Address &&
+      contactForm.Message
     ) {
       try {
         const res = await fetch(
@@ -68,12 +68,12 @@ const Contact = () => {
               "Content-Type": "application/json",
             },
             body: JSON.stringify({
-              fullname: contactForm.fullname,
-              email: contactForm.email,
-              address: contactForm.address,
-              message: contactForm.message,
+              fullname: contactForm.Fullname,
+              email: contactForm.Email,
+              address: contactForm.Address,
+              message: contactForm.Message,
             }),
-          }
+          },
         );
 
         const data = await res.json();
@@ -87,13 +87,13 @@ const Contact = () => {
   return (
     <div id="contact" className="mb-24">
       <div className="flex items-center justify-center">
-        <span className="text-xl font-medium text-black font-extrabold my-8">
+        <span className="text-xl font-medium text-black font-semibold my-8">
           CONTACT US
         </span>
       </div>
-      <div className="flex gap-25 px-16 mt-4 flex-wrap">
+      <div className="flex gap-25 px-16 pb-10 mt-4 flex-wrap">
         <div className="flex-1 p-4">
-          <h4 className="pb-3 text-lg font-medium text-red-800">
+          <h4 className="pb-3 text-lg font-medium  text-cyan-500">
             {" "}
             CONTACT INFORMATION{" "}
           </h4>
@@ -104,7 +104,7 @@ const Contact = () => {
           </p>
           {contactInfo?.map((elem) => (
             <div>
-              <div className="flex gap-2 text-red-800">
+              <div className="flex gap-2  text-cyan-500">
                 {elem?.icon}
                 <h6 className="text-md font-medium">{elem.title} :</h6>
               </div>
@@ -112,8 +112,8 @@ const Contact = () => {
             </div>
           ))}
         </div>
-        <div className="flex-1 border-2 rounded-lg py-8 px-6 border-3 border-black-700">
-          <h4 className="text-lg font-medium text-black font-bold text-red-800">
+        <div className="w-auto border-2 rounded-lg py-8 px-6 border-3 border-cyan-500">
+          <h4 className="text-lg font-medium text-black font-bold  text-cyan-500">
             GET IN TOUCH
           </h4>
           <div className="mt-6">
@@ -122,7 +122,11 @@ const Contact = () => {
                 <h4 className="text-md font-medium"> {item} : </h4>
                 <input
                   type="text"
-                  className="my-3 w-lg py-1 px-2 border-2 rounded-md"
+                  className="my-3 w-lg py-2 px-2 border-2 rounded-md bg-gray-100 border-sky-400 text-sm transition
+                  focus:outline-none
+                  focus:ring-2
+                  focus:ring-blue-500
+                  focus:bg-white"
                   placeholder={placeholders[item]}
                   value={contactForm[item]}
                   onChange={(e) => handleForm(item, e.target.value)}
@@ -130,11 +134,7 @@ const Contact = () => {
               </div>
             ))}
             {message.type && <ToastMess message={message} />}
-            <Button
-              name="Submit"
-              className={`${["border-red-900", "bg-red-800", "mt-10"]}`}
-              onClick={(e) => handleSubmit(e)}
-            />
+            <Button name="Submit" onClick={(e) => handleSubmit(e)} />
           </div>
         </div>
       </div>

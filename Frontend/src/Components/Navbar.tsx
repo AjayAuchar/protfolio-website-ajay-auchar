@@ -49,12 +49,12 @@ const Navbar = () => {
     <div className="flex gap-13 cursor-pointer">
       <>
         {/* Desktop nav */}
-        <div className="hidden md:flex gap-8 cursor-pointer">
+        <div className="hidden md:flex gap-12 cursor-pointer">
           {navData.map((navItem, ind) => (
             <a
               key={ind}
               href={navItem.id}
-              className="flex items-center gap-2 text-base font-medium text-red-800 hover:text-black transition"
+              className="flex items-center gap-2 font-semibold text-black hover:text-sky-500 transition"
             >
               {navItem.icon}
               <span>{navItem.name}</span>
@@ -64,7 +64,7 @@ const Navbar = () => {
       </>
 
       {/* Toggle Icon */}
-      <div className="md:hidden text-3xl text-red-800" onClick={handleToggle}>
+      <div className="md:hidden text-3xl text-cyan-500" onClick={handleToggle}>
         {menuOpen ? <CloseIcon /> : <MenuIcon />}
       </div>
 
@@ -77,7 +77,7 @@ const Navbar = () => {
                 key={ind}
                 href={navItem.id}
                 onClick={handleLinkClick}
-                className="flex items-center gap-3 py-2 text-base font-medium text-red-800 hover:bg-[#F5F5F5] cursor-pointer transition"
+                className="flex items-center gap-3 py-2 font-semibold text-black hover:bg-sky-500 cursor-pointer transition"
               >
                 {navItem.icon}
                 <span>{navItem.name}</span>

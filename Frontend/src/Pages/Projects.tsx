@@ -1,6 +1,6 @@
 import React from "react";
 import ticTacToeGameImg from "../Images/ticTacToeGameImg.png";
-import protfolioWebsiteImg from "../Images/protfolioWebsiteImg.png";
+import infinityScrollGalleryImg from "../Images/infinityScrollGalleryImg.png";
 import madiraWebImg from "../Images/madiraWebImg.png";
 import {
   Button,
@@ -15,28 +15,28 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 const Projects = () => {
   const projectData = [
     {
-      name: "Tic Tac Toe Game",
+      name: "Infinite Scroll Gallery",
       detail:
-        " A full-featured dashboard for e-commerce stores with analytics, product management, and order processing",
-      img: ticTacToeGameImg,
-      gitUrl: "https://gitlab.com/my-websites4815020/tic-tac-toe-game",
-      url: "",
-    },
-    {
-      name: "Portfolio Website",
-      detail:
-        " A full-featured dashboard for e-commerce stores with analytics, product management, and order processing",
-      img: protfolioWebsiteImg,
-      gitUrl: "https://github.com/AjayAuchar/protfolio-website-ajay-auchar",
-      url: "https://protfolio-website-ajay-auchar.onrender.com",
+        " A responsive React application that fetches images from the Unsplash API and implements infinite scrolling using the Intersection Observer API. It includes search functionality, image preview modal, and state management using custom hooks and Context API for performance optimization..",
+      img: infinityScrollGalleryImg,
+      gitUrl: "https://github.com/AjayAuchar/Infinite-scroll-gallery",
+      url: "https://infinite-scroll-gallery-9v3m.onrender.com/",
     },
     {
       name: "Static Website",
       detail:
-        " A full-featured dashboard for e-commerce stores with analytics, product management, and order processing",
+        "Developed a full-stack website with React routing for navigation and a backend form submission system using Node.js, Express, and MongoDB for data persistence.",
       img: madiraWebImg,
       gitUrl:
         "https://github.com/AjayAuchar/pt-international-mandiri-expo-frontend",
+      url: "",
+    },
+    {
+      name: "Tic Tac Toe Game",
+      detail:
+        "A classic Tic-Tac-Toe game built with React.js featuring interactive UI, state management for game logic, and winner detection with reset functionality.",
+      img: ticTacToeGameImg,
+      gitUrl: "https://gitlab.com/my-websites4815020/tic-tac-toe-game",
       url: "",
     },
   ];
@@ -49,7 +49,7 @@ const Projects = () => {
   return (
     <div id="projects" className="mb-18">
       <div className="flex items-center justify-center">
-        <span className="text-xl font-medium text-black font-extrabold my-8">
+        <span className="text-xl font-medium text-black font-semibold my-8">
           MY PROJECTS
         </span>
       </div>
@@ -75,14 +75,14 @@ const Projects = () => {
                   openInNewTab(elem.url);
                 }}
               >
-                <OpenInNewIcon className="text-red-800" />
+                <OpenInNewIcon className="text-cyan-500" />
               </Button>
               <Button
                 onClick={() => {
                   openInNewTab(elem.gitUrl);
                 }}
               >
-                <GitHubIcon className="text-red-800" />
+                <GitHubIcon className="text-cyan-500" />
               </Button>
             </CardActions>
           </Card>

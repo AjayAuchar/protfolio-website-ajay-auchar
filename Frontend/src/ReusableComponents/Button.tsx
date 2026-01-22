@@ -6,13 +6,10 @@ type ButtonType = {
   className?: string;
 };
 
-const Button = ({ name, routeId, className, onClick = {} }: ButtonType) => {
+const Button = ({ name, routeId, onClick = {} }: ButtonType) => {
   return (
     <button
-      className={`py-2 w-40 border-3 rounded-lg cursor-pointer text-white font-medium ${className?.replace(
-        /,/g,
-        " "
-      )}`}
+      className="py-2 max-w-45 min-w-45 border-3 border-cyan-400 bg-sky-700 rounded-lg cursor-pointer text-white font-medium mt-10"
       onClick={onClick}
     >
       <a href={routeId}> {name} </a>

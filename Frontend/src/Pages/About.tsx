@@ -1,28 +1,12 @@
 import React from "react";
 import profileImg from "../Images/AjayAucharPhoto.jpg";
-import InfoCard from "../ReusableComponents/InfoCard";
 import Button from "../ReusableComponents/Button";
-import EmailIcon from "@mui/icons-material/Email";
-import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import PersonIcon from "@mui/icons-material/Person";
 
 const About = () => {
-  const InfoDetail = [
-    { title: "Name", detail: "Ajay Auchar", icon: <PersonIcon /> },
-    { title: "Email", detail: "ajayauchar02@gmail.com", icon: <EmailIcon /> },
-    { title: "Number", detail: "+91 8291626294", icon: <LocalPhoneIcon /> },
-    {
-      title: "Linked Profile",
-      detail: "https://www.linkedin.com/in/ajay-auchar-6ab080223/",
-      icon: <LinkedInIcon />,
-    },
-  ];
-
   return (
     <div id="about">
       <div className="flex items-center justify-center">
-        <span className="text-xl font-medium text-black font-extrabold my-8">
+        <span className="text-xl font-medium text-black font-semibold my-8">
           ABOUT ME
         </span>
       </div>
@@ -30,12 +14,12 @@ const About = () => {
         <div className="flex-1 flex items-center justify-center">
           <img
             src={profileImg}
-            className="w-80 h-80 rounded-full object-cover border-5 border-red-700 shrink-0"
+            className="w-80 h-80 rounded-full object-cover border-5 border-cyan-500 shrink-0"
           />
         </div>
         <div className="flex-2 flex flex-col text-center md:text-start">
           <>
-            <h4 className="text-xl font-medium mt-3 text-red-800 mb-4">
+            <h4 className="text-xl font-medium mt-3 text-cyan-500 mb-4">
               Frontend Developer{" "}
             </h4>
             <p className="text-md">
@@ -60,16 +44,7 @@ const About = () => {
               expertise in modern frontend development.
             </p>
           </>
-          <div className="flex gap-10 flex-wrap mt-8">
-            {InfoDetail?.map((data, ind) => (
-              <InfoCard key={ind} data={data} />
-            ))}
-          </div>
-          <Button
-            name="Let's Connect"
-            className={`${["border-red-900", "bg-red-800", "mt-12"]}`}
-            routeId="#contact"
-          />
+          <Button name="Let's Connect" routeId="#contact" />
         </div>
       </div>
     </div>
