@@ -9,9 +9,7 @@ import Contact from "./Pages/Contact";
 function App() {
   return (
     <div>
-      <div className="flex justify-between py-6 px-14">
-        <Header />
-      </div>
+      <Header />
       <Home />
       <About />
       <Skills />
