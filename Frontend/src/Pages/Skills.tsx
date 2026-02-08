@@ -5,20 +5,20 @@ const skillData = [
   {
     title: "Frontend Development",
     skills: [
-      { skill: "React JS", percentage: 95 },
-      { skill: "JavaScript", percentage: 87 },
-      { skill: "Redux", percentage: 95 },
-      { skill: "Redux Saga", percentage: 90 },
-      { skill: "HTML", percentage: 98 },
+      { skill: "React JS", percentage: 100 },
+      { skill: "JavaScript", percentage: 95 },
+      { skill: "Redux", percentage: 100 },
+      { skill: "Redux Toolkit", percentage: 100 },
+      { skill: "HTML", percentage: 100 },
     ],
   },
   {
     title: "Styling Libraries",
     skills: [
-      { skill: "CSS", percentage: 98 },
-      { skill: "Tailwind CSS", percentage: 90 },
-      { skill: "Material UI", percentage: 88 },
-      { skill: "Bootstrap", percentage: 88 },
+      { skill: "CSS", percentage: 100 },
+      { skill: "Tailwind CSS", percentage: 100 },
+      { skill: "Material UI", percentage: 100 },
+      { skill: "Bootstrap", percentage: 100 },
     ],
   },
   {
@@ -49,7 +49,11 @@ const Skills = () => {
             {elem.skills.map((item) => (
               <>
                 <div className="py-4 font-medium"> {item.skill} </div>
-                <ProgressBar completed={item.percentage} bgColor="#0fabc6ff" />
+                <ProgressBar
+                  completed={item.percentage}
+                  bgColor="#0fabc6ff"
+                  height="22px"
+                />
               </>
             ))}
           </div>

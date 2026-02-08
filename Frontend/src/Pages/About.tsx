@@ -4,9 +4,9 @@ import Button from "../ReusableComponents/Button";
 
 const About = () => {
   return (
-    <div id="about">
+    <div id="about" className="bg-gray-100">
       <div className="flex items-center justify-center">
-        <span className="text-xl font-medium text-black font-semibold my-8">
+        <span className="text-xl font-medium text- font-semibold my-8">
           ABOUT ME
         </span>
       </div>

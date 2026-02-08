@@ -47,9 +47,9 @@ const Projects = () => {
   };
 
   return (
-    <div id="projects" className="mb-18">
+    <div id="projects" className="mb-18 bg-gray-100 py-8">
       <div className="flex items-center justify-center">
-        <span className="text-xl font-medium text-black font-semibold my-8">
+        <span className="text-xl font-medium text-black font-semibold pb-6">
           MY PROJECTS
         </span>
       </div>
