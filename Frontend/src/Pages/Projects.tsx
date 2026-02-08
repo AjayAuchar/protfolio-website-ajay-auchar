@@ -19,7 +19,7 @@ const Projects = () => {
       detail:
         "I built a LinkedIn clone using the MERN stack where users can register, create profiles, and interact through posts, likes, and comments. I designed scalable REST APIs with Express.js and MongoDB, implemented secure JWT-based authentication and authorization, and deployed the full-stack application on Render with a production-ready setup. I developed a responsive and modern UI using React.js and optimized performance with reusable components, state management, and API caching.",
       img: linkedInCloneImg,
-      gitUrl: "https://github.com/burakorkmez/linkedin-clone",
+      gitUrl: "https://github.com/AjayAuchar/LinkedIn-Clone",
       url: "https://linkedin-clone-nbvs.onrender.com/",
     },
     {
