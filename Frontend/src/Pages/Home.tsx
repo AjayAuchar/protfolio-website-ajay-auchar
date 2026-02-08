@@ -33,7 +33,7 @@ const Home = () => {
           <h4 className="text-xl font-medium mt-3 text-cyan-500">
             Frontend Developer
           </h4>
-          <p className="text-md mt-3 text-black">
+          <p className="text-md mt-3 text-gray-500">
             I am Ajay Auchar, a dedicated Frontend Developer with over 3+ years
             of professional experience in designing and developing
             high-performance, scalable, and responsive web applications. I

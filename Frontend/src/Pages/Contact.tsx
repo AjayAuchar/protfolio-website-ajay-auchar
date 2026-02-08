@@ -97,7 +97,7 @@ const Contact = () => {
             {" "}
             CONTACT INFORMATION{" "}
           </h4>
-          <p className="text-md my-5 text-black">
+          <p className="text-md my-5 text-gray-500">
             I am currently open to new opportunities and collaborative projects
             where I can contribute my skills and experience in frontend
             development. Let’s connect and build something great together.
@@ -108,7 +108,7 @@ const Contact = () => {
                 {elem?.icon}
                 <h6 className="text-md font-medium">{elem.title} :</h6>
               </div>
-              <p className="mb-5 font-medium"> {elem.detail}</p>
+              <p className="mb-5 font-medium text-gray-500"> {elem.detail}</p>
             </div>
           ))}
         </div>
@@ -119,7 +119,10 @@ const Contact = () => {
           <div className="mt-6">
             {Object.keys(contactForm).map((item) => (
               <div className="flex-col">
-                <h4 className="text-md font-medium"> {item} : </h4>
+                <h4 className="text-md font-medium text-gray-500">
+                  {" "}
+                  {item} :{" "}
+                </h4>
                 <input
                   type="text"
                   className="my-3 w-lg py-2 px-2 border-2 rounded-md bg-gray-100 border-sky-400 text-sm transition

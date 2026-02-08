@@ -22,7 +22,7 @@ const About = () => {
             <h4 className="text-xl font-medium mt-3 text-cyan-500 mb-4">
               Frontend Developer{" "}
             </h4>
-            <p className="text-md">
+            <p className="text-md text-gray-500">
               I’m Ajay Auchar, a results-oriented Frontend Developer with over 3
               years of experience in designing and building responsive,
               high-performance web applications. I specialize in developing
@@ -30,14 +30,14 @@ const About = () => {
               React.js, JavaScript (ES6+), TypeScript, Redux Toolkit, and
               popular UI libraries like Material UI and Tailwind CSS.
             </p>
-            <p className="mt-4 text-md">
+            <p className="mt-4 text-md text-gray-500">
               My work focuses on delivering clean, scalable, and maintainable
               code that enhances both user experience and system performance. I
               have hands-on experience with real-time data communication using
               WebSockets, efficient REST API integration, and managing complex
               application states for robust front-end behavior.
             </p>
-            <p className="mt-4 text-md">
+            <p className="mt-4 text-md text-gray-500">
               Currently based in Navi Mumbai, India, I am actively exploring new
               opportunities that allow me to contribute to innovative teams,
               solve real-world problems through technology, and advance my
